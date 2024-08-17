@@ -26,17 +26,17 @@ def insert_data(table_name, **kwargs):
 
     try:
 
-        # inserting data into flm_users table
+        # inserting data into cpr_users table
         if table_name == "cpr_users":
             sql = ("INSERT INTO cpr_users (first_name, last_name, email, dob, salt, password) "
                    "VALUES (%(first_name)s, %(last_name)s, %(email)s, %(dob)s, %(salt)s, %(password)s)")
 
-        # inserting data into flm_accounts table
+        # inserting data into cpr_accounts table
         elif table_name == "cpr_accounts":
             sql = ("INSERT INTO cpr_accounts (user_id, account_number, balance, is_active) "
                    "VALUES (%(user_id)s, %(account_number)s, %(balance)s, %(is_active)s)")
 
-        # inserting data into flm_transactions table
+        # inserting data into cpr_transactions table
         elif table_name == "cpr_transactions":
             sql = (
                 "INSERT INTO cpr_transactions (user_id, account_id, amount, from_account, to_account, trans_date, trans_type) "
